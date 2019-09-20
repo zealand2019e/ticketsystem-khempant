@@ -6,13 +6,15 @@ namespace ClassLibrary
 {/// <summary>
 /// This is my Car Class
 /// </summary>
-    public class Car
+    public class Car:Vehicle
     {
-        public double Price()
+        public override double Price()
         {
             return 240;
         }
-
-
+        public string VechileType()
+        {
+            return Car;
+        }
     }
 }

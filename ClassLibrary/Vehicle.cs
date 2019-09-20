@@ -4,16 +4,39 @@ using System.Text;
 
 namespace ClassLibrary
 {
-    public abstract class Vehicle
+    public  class Vehicle
     {
-        private double _price;
-        private bool _brobizz;
-        private string licensePlate;
         public DateTime Date { get; set; }
-        public abstract string VehicleType();
-
-        public virtual double Price()
+        public bool Brobizz { get; set; }
+        public  string VehicleType()
         {
+
         }
-    }
-}
+        public string _price;
+        public string LicensePlate
+        {
+            get
+            {
+                return LicensePlate;
+            }
+            set
+            {
+                if (value.Length > 7)
+                {
+                    throw new Exception("License plate is too long");
+                }
+                else
+                {
+                    LicensePlate = value;
+                }
+            }
+        }
+            
+                public virtual double Price()
+                {
+
+                }
+            }
+        }
+    
+
